@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.pacifico-regular {
+    font-family: "Pacifico", "cursive";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.dashed-line {
+    width: 100%;
+    height: 2px; 
+    border-bottom: 1px dashed #000; 
+    margin: 20px 0;
+}
+
+::selection{
+    color: black;
+    background-color: #fec260;
+}
+
+button{
+    width: 120px;
+    height: 50px;
+}
+.F-btn{
+    transform: translate(50%,-50%);
+
+}
+
+body{
+    background-color:  rgb(247, 236, 222);
+}
+
+.highlight-word {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;   
+}
+
+.highlight-word::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fec260;
+    width: 100%;
+    height: 40%;
+    transition: height 0.4s;
+    cursor: text;
+    z-index: -1;
+}
+.highlight-word:hover::after {
+    height: 100%;
+}
+
+h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    text-emphasis-color: transparent; 
+    display: inline-block;
+}
+h2 .right{
+    color: green;
+}
+
+h2 .left{
+    color: #fec260;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #00000057;
+    z-index: 555;
+    opacity: 0;
+    z-index: -1;
+}
+.error-message{
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    border-radius:10px ;
+}
+.balls > div{
+    width: 30px;
+    height: 30px;
+}
+.p-icon{
+    font-size: 30px;
+}
+.close-icon{
+    font-size: 24px;
+    cursor: pointer;
+}
+.clear{
+    opacity: 0;
+    z-index: -1;
+}
+.appear{
+    opacity: 1;
+    z-index: 5;
+}
