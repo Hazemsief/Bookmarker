@@ -68,17 +68,19 @@ function deleteitem(index) {
 }
 
 function visititem(index) {
-    window.open(allproducts[index].URL, '_blank');
+    window.open('http://' + allproducts[index].URL, '_blank');
 }
 
 function Valid() {
     var namergex = /^[a-zA-Z0-9\s]{1,50}$/;
     var testing = namergex.test(siteName.value);
+    return testing;
 }
 
 function validURL() {
     var urlregex = /^www\.[-a-zA-Z0-9@:%._\+~#=]{2,256}\.com$/;
     var test = urlregex.test(WebsiteUrl.value);
+    return test;
 }
 
 function checking() {
@@ -86,5 +88,10 @@ function checking() {
 }
 
 function showError() {
-
+    siteName.style.color = "blue";
+    WebsiteUrl.style.color = "blue";
+    siteName.style.borderColor = "blue";
+    siteName.style.borderWidth = "2px";
+    WebsiteUrl.style.borderColor = "blue";
+    WebsiteUrl.style.borderWidth = "2px";
 }
